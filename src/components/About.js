@@ -13,9 +13,9 @@ function About() {
         </div>
         <div>
           <h2>
-            The idea behind this come from the thought that there needs to be a
+            This come from the thought that there needs to be a
             way to search for recipes with the ability to filter out a
-            particular, or multiple allergan.
+            particular, or multiple allergens.
           </h2>
         </div>
       </p>
