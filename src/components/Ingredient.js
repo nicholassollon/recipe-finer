@@ -1,5 +1,5 @@
 import React from "react";
-import useState from "react";
+import {useState} from "react";
 
 function Ingredient() {
 
@@ -9,16 +9,20 @@ function Ingredient() {
         updateIngredient(input);
     }
 
-    return <React.Fragment><label>
-        Ingredient
-        <input
+    return( 
+    <React.Fragment>
+        <label>
+            Ingredient
+            <input
             name="ingredient"
             type="text"
-            onChange={this.handleIngredient}
+            onChange={handleIngredient}
             value = {ingredient} />
-    </label>
-        <br />
+        </label>
+        <p>{ingredient}</p>
+            <br />
     </React.Fragment>
+    )
 }
 
 export default Ingredient;
