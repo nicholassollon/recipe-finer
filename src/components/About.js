@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function About() {
   return (
@@ -13,46 +13,51 @@ function About() {
         </div>
         <div>
           <h2>
-            This come from the thought that there needs to be a
-            way to search for recipes with the ability to filter out a
-            particular, or multiple allergens.
+            Today, almost everyone here knows or knows of someone that has some
+            kind of or multiple food allergies. Our goal here is to create an
+            application that will allow people to search through a list of
+            recipes, with the ability to filter out those allergens. This will
+            allow people to create meals that are safe for the people they love.
+            We have also included a form that allow for the addition of recipes
+            to share. Don't have food allergies, no problem, there is no need
+            make any changes to your search. This "cookbook" is for everyone!
           </h2>
         </div>
       </p>
 
       <div>
-        <p>
-          <a href="https://linkedin.com/in/isabella-persaud-588754235">
-            <button>Isabella Persaud</button>
-          </a>
-        </p>
+        Isabella Persaud
+        <br />
+        <a href="https://linkedin.com/in/isabella-persaud-588754235">
+          <button>Linkedin</button>
+        </a>
       </div>
 
       <div>
-        <p>
-          <a href="https://linkedin.com/in/matthew-williams2023">
-            <button>Matthew Williams</button>
-          </a>
-        </p>
+        Matthew Williams
+        <br />
+        <a href="https://linkedin.com/in/matthew-williams2023">
+          <button>Linkedin</button>
+        </a>
       </div>
 
       <div>
-        <p>
-          <a href="https://linkedin.com/in/nickita-danilovich-39b77b263">
-            <button>Nickita Danilovich</button>
-          </a>
-        </p>
+        Nickita Danilovich
+        <br />
+        <a href="https://linkedin.com/in/nickita-danilovich-39b77b263">
+          <button>Linkedin</button>
+        </a>
       </div>
 
       <div>
-        <p>
-          <a href="https://linkedin.com/in/nicholassollon">
-            <button>Nicholas Sollon</button>
-          </a>
-        </p>
+        Nicholas Sollon
+        <br />
+        <a href="https://linkedin.com/in/nicholassollon">
+          <button>Linkedin</button>
+        </a>
       </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
