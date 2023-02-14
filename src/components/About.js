@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
+import Button from './Button'
 
 function About() {
   return (
     <div>
-      <p>
         <h1>Welcome!</h1>
         <div>
           <h2>
@@ -23,41 +23,24 @@ function About() {
             make any changes to your search. This "cookbook" is for everyone!
           </h2>
         </div>
-      </p>
 
       <div>
-        Isabella Persaud
-        <br />
-        <a href="https://linkedin.com/in/isabella-persaud-588754235">
-          <button>Linkedin</button>
-        </a>
+        <Button onClick name = {'Isabella Persaud'} linkedin={'https://linkedin.com/in/isabella-persaud-588754235'} />
       </div>
 
       <div>
-        Matthew Williams
-        <br />
-        <a href="https://linkedin.com/in/matthew-williams2023">
-          <button>Linkedin</button>
-        </a>
+         <Button onClick name = {'Matthew Williams'} linkedin={'https://linkedin.com/in/matthew-williams2023'} />
       </div>
 
       <div>
-        Nickita Danilovich
-        <br />
-        <a href="https://linkedin.com/in/nickita-danilovich-39b77b263">
-          <button>Linkedin</button>
-        </a>
+      <Button onClick name = {'Nickita Danilovich'} linkedin={'https://linkedin.com/in/nickita-danilovich-39b77b263'} />
       </div>
 
       <div>
-        Nicholas Sollon
-        <br />
-        <a href="https://linkedin.com/in/nicholassollon">
-          <button>Linkedin</button>
-        </a>
+      <Button onClick name = {'Nicholas Sollon'} linkedin={'https://linkedin.com/in/nicholassollon'} />
       </div>
     </div>
-  );
+  )
 }
 
 export default About;
