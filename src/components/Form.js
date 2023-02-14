@@ -17,11 +17,12 @@ function Form() {
         addInput([...inputList, <Ingredient class="ingredient"></Ingredient>]);
     }
 
-    function handleSubmit(){
+    // function handleSubmit(){
         
-    }
+    // }
 
-    return (<div>
+    return (
+    <div className='Form'>
         <label>
             Recipe Name
             <input
@@ -40,7 +41,8 @@ function Form() {
                 onChange={handleRecipe}
                 value={recipe} />
         </label>
-    </div>)
+    </div>
+    )
 
 }
 

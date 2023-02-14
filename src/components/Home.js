@@ -8,7 +8,7 @@ import Search from './Search'
 
 function Home() {
     return(
-        <div>
+        <div className='Home'>
             <Nav />
             <Search />
             <About />
@@ -16,26 +16,6 @@ function Home() {
         </div>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
