@@ -3,7 +3,6 @@ import React from 'react'
 function About() {
   return (
     <div>
-      <p>
         <h1>Welcome!</h1>
         <div>
           <h2>
@@ -18,7 +17,6 @@ function About() {
             particular, or multiple allergens.
           </h2>
         </div>
-      </p>
 
       <div>
         <p>
