@@ -1,53 +1,31 @@
 import React from 'react';
 import { useState } from "react"
-import Ingredient from "./Ingredient.js";
 function Form() {
-
     //Form inputs to be posted
     const [recipe, updateRecipe] = useState("");
     const [name, updateName] = useState("");
     const [ingredients, updateIngredients] = useState([]);
     const [ingredient, updateIngredient] = useState("");
     const [image, updateImage] = useState("");
-
     const [allergens, updateAllergens] = useState([false, false, false, false, false, false, false])
-
-
-    const [allergens, updateAllergens] = useState([false, false, false, false, false, false, false])
-
     const [isLoading, updateIsLoading] = useState(false)
     //Functions to handle state, and form related events
     function handleIngredients() {
         if (ingredient.length > 0)
             updateIngredients([...ingredients, ingredient]);
     }
-
     function handleRecipe(recipe) {
         updateRecipe(recipe.target.value);
     }
-
     function handleName(name) {
         updateName(name.target.value);
     }
-
     function handleIngredient(e) {
         updateIngredient(e.target.value)
     }
     function handleImage(image) {
         updateImage(image.target.value)
     }
-
-
-    function handleIngredient(e) {
-        updateIngredient(e.target.value)
-    }
-
-    function handleImage(image) {
-        updateImage(image.target.value)
-    }
-
-
-
     function handleSubmit(event) {
         event.preventDefault();
         updateIsLoading(true);
@@ -68,7 +46,6 @@ function Form() {
             .then((response) => {
                 updateIsLoading(false);
             });
-
     }
     //[peanuts, fish, shellfish, dairy, soy, gluten, egg]
     //Allergen update function
@@ -78,21 +55,6 @@ function Form() {
         updateAllergens(newAllergens);
     }
     //Prettying functions
-
-    }
-
-    //[peanuts, fish, shellfish, dairy, soy, gluten, egg]
-    //Allergen update function
-    function handleAllergen(aller) {
-        const newAllergens = [...allergens]
-        newAllergens[aller] = !newAllergens[aller]
-        updateAllergens(newAllergens);
-    }
-
-
-    //Prettying functions
-
-
     function displayIngredients() {
         const display = [];
         for (let i = 0; i < ingredients.length; i++)
@@ -130,12 +92,10 @@ function Form() {
                 onChange={handleIngredient}
                 value={ingredient} />
         </label>
-
             <p>Ingredients:{displayIngredients()}</p>
             <br /></div>
         <button onClick={handleIngredients}>Add Ingredient</button>
         <br /><br />
-
         {/* [peanuts, fish, shellfish, dairy, soy, gluten, egg] */}
         <p>Does your recipe or ingredients contain...</p><br />
         <input onClick={() => handleAllergen(0)} type="checkbox" name="peanut" value="peanut" />Peanut
@@ -146,7 +106,6 @@ function Form() {
         <input onClick={() => handleAllergen(5)} type="checkbox" name="gluten" value="gluten" />Gluten
         <input onClick={() => handleAllergen(6)} type="checkbox" name="egg" value="egg" />Egg
         <br /><br />
-
         <label>
             Recipe
             <input
@@ -155,9 +114,8 @@ function Form() {
                 onChange={handleRecipe}
                 value={recipe} />
         </label>
-
         <br /><br />
         <button type="submit" onClick={handleSubmit}>Submit Recipe</button>
     </div>)
 }
-export default Form;
+export default Form
