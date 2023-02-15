@@ -120,4 +120,4 @@ function Form() {
         <button type="submit" onClick={handleSubmit}>Submit Recipe</button>
     </div>)
 }
-export default Form;
+export default Form
