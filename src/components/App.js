@@ -4,14 +4,12 @@ import Form from './Form'
 import Nav from './Nav'
 import RecipiePage from './RecipiePage'
 import React from 'react'
-import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom"
+import {Route} from "react-router-dom"
 
 function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
       <Route exact path="/">
           <Nav />
           <Home />
@@ -27,7 +25,7 @@ function App() {
         <Route exact path="/recipes">
           <Nav />
           <RecipiePage />
-        </Route></BrowserRouter>
+        </Route>
     </div>)
 }
 
