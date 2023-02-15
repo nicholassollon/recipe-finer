@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from "react-router-dom"
 function Nav(){
 
     function navigate(e) {
@@ -27,9 +27,9 @@ function Nav(){
         <div class="full-page-green"></div>
         <div class="ham-menu">
             <ul class="centre-text bold-text">
-                <li onClick={()=> navigate("/home")}>Home</li>
-                <li onClick={()=> navigate("/recipes")}>Recipes</li>
-                <li onClick={()=>navigate("/form")}>Add Your Own Recipe</li>
+                <Link to="/home">Home</Link>
+                <Link to="/recipes">Recipes</Link>
+                <Link to="/form">Submit Your Recipe</Link>
             </ul>
         </div>
     </div>
