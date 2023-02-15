@@ -1,7 +1,6 @@
 import React from 'react'
 
 import About from './About'
-import Nav from './Nav'
 // import Search from './Search'
 
 
@@ -9,7 +8,6 @@ import Nav from './Nav'
 function Home() {
     return(
         <div className='Home'>
-            <Nav />
             <About />
         </div>
     )

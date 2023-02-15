@@ -1,6 +1,11 @@
 import React from 'react'
 
 function Nav(){
+
+    function navigate(e) {
+        window.history.pushState({}, "", e);
+      }
+
     return(
         <div className='Nav'>
             <section class="wrapper">
@@ -22,10 +27,9 @@ function Nav(){
         <div class="full-page-green"></div>
         <div class="ham-menu">
             <ul class="centre-text bold-text">
-                <li>Home</li>
-                <li>Recipes</li>
-                <li>Add Your Own Recipe</li>
-                <li>About</li>
+                <li onClick={()=> navigate("/home")}>Home</li>
+                <li onClick={()=> navigate("/recipes")}>Recipes</li>
+                <li onClick={()=>navigate("/form")}>Add Your Own Recipe</li>
             </ul>
         </div>
     </div>
