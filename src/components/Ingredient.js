@@ -2,12 +2,17 @@ import React from "react";
 import { useState } from "react";
 
 function Ingredient() {
-
     const [ingredient, updateIngredient] = useState("");
+
+    function handleIngredient(input) {
+        updateIngredient(input.target.value);
+    }
+
     
     function handleIngredient(input) {
         updateIngredient(input.target.value);
     }
+
 
     return (
         <React.Fragment>
@@ -23,5 +28,4 @@ function Ingredient() {
         </React.Fragment>
     )
 }
-
 export default Ingredient;

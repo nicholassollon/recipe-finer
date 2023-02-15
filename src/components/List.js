@@ -4,23 +4,11 @@ import React from 'react'
 
 function List() {
     return(
-        <div>
-            <p>Hello</p>
+        <div className='List'>
         </div>
     )
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

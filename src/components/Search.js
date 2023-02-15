@@ -2,26 +2,12 @@ import React from 'react'
 
 function Search() {
     return(
-        <div>
+        <div className='Search'>
             <input type="text" placeholder="Search" id="search" />
         </div>
     )
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

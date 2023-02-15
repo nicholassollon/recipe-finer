@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from "react"
 import Ingredient from "./Ingredient.js";
-
 function Form() {
 
     //Form inputs to be posted
@@ -10,6 +9,9 @@ function Form() {
     const [ingredients, updateIngredients] = useState([]);
     const [ingredient, updateIngredient] = useState("");
     const [image, updateImage] = useState("");
+
+    const [allergens, updateAllergens] = useState([false, false, false, false, false, false, false])
+
 
     const [allergens, updateAllergens] = useState([false, false, false, false, false, false, false])
 
@@ -31,10 +33,19 @@ function Form() {
     function handleIngredient(e) {
         updateIngredient(e.target.value)
     }
+    function handleImage(image) {
+        updateImage(image.target.value)
+    }
+
+
+    function handleIngredient(e) {
+        updateIngredient(e.target.value)
+    }
 
     function handleImage(image) {
         updateImage(image.target.value)
     }
+
 
 
     function handleSubmit(event) {
@@ -57,6 +68,17 @@ function Form() {
             .then((response) => {
                 updateIsLoading(false);
             });
+
+    }
+    //[peanuts, fish, shellfish, dairy, soy, gluten, egg]
+    //Allergen update function
+    function handleAllergen(aller) {
+        const newAllergens = [...allergens]
+        newAllergens[aller] = !newAllergens[aller]
+        updateAllergens(newAllergens);
+    }
+    //Prettying functions
+
     }
 
     //[peanuts, fish, shellfish, dairy, soy, gluten, egg]
@@ -70,6 +92,7 @@ function Form() {
 
     //Prettying functions
 
+
     function displayIngredients() {
         const display = [];
         for (let i = 0; i < ingredients.length; i++)
@@ -79,7 +102,6 @@ function Form() {
                 display.push(ingredients[i])
         return display
     }
-
     return (<div>
         <label>
             Recipe Name
@@ -137,7 +159,5 @@ function Form() {
         <br /><br />
         <button type="submit" onClick={handleSubmit}>Submit Recipe</button>
     </div>)
-
 }
-
 export default Form;

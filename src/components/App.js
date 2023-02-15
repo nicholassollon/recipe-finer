@@ -15,7 +15,7 @@ function App() {
       <Home />
       {/* home has nav, search, about */}
       <List />
-      <RecipiePage />
+      {/* <RecipiePage /> */}
     </div>
   );
 }
