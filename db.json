@@ -2,38 +2,17 @@
   "recipes": [
     {
       "id": 1,
-      "ingredients": [
-        "steak 1 lb",
-        "salt",
-        "black pepper"
-      ],
+      "ingredients": ["steak 1 lb","salt", "black pepper"],
       "recipe": "Liberally add salt and pepper to your steak, then sear on both sides to your liking",
-      "allergens": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
+      "allergens":[false, false, false, false, false, false],
       "image": "https://memestatic.fjcdn.com/pictures/The+most+cursed+food_052080_7464097.jpg",
       "name": "Surprise :)"
-    },
-    {
+    }
+    ,{
       "id": 2,
-      "ingredients": [
-        "cereal",
-        "mayo"
-      ],
+      "ingredients": ["cereal", "mayo"],
       "recipe": "Mayo then cereal",
-      "allergens": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
+      "allergens":[false, false, false, false, false, false],
       "image": "https://i.redd.it/39auj2emjg221.jpg",
       "name": "Cereal"
     }
