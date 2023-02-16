@@ -17,5 +17,4 @@ function Button({name, linkedin}) {
     )
 }
 
-
 export default Button
