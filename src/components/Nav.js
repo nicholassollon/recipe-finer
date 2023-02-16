@@ -1,6 +1,11 @@
 import React from 'react'
-
+import {Link} from "react-router-dom"
 function Nav(){
+
+    function navigate(e) {
+        window.history.pushState({}, "", e);
+      }
+
     return(
         <div className='Nav'>
             <section class="wrapper">
@@ -22,10 +27,9 @@ function Nav(){
         <div class="full-page-green"></div>
         <div class="ham-menu">
             <ul class="centre-text bold-text">
-                <li>Home</li>
-                <li>Recipes</li>
-                <li>Add Your Own Recipe</li>
-                <li>About</li>
+                <Link to="/home">Home</Link>
+                <Link to="/recipes">Recipes</Link>
+                <Link to="/form">Submit Your Recipe</Link>
             </ul>
         </div>
     </div>

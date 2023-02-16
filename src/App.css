@@ -281,18 +281,18 @@ html {
   background-size: cover;
 }
 .welcome{
-  position: fixed;
+  position: absolute;
   left: 30%;
-  top: 19%;
+  top: 25%;
   width: 40%;
   color: #ffffff;
   font-size: 500%;
   text-shadow: 2px 4px 4px rgba(46,91,173,0.6)
 }
 .h2{
-  position: fixed;
+  position: absolute;
   left: 22.5%;
-  top: 25%;
+  top: 35%;
   width: 55%;
   color: #ffffff;
   font-size: 300%;
@@ -300,9 +300,9 @@ html {
 }
 
 .h22{
-  position: fixed;
+  position: absolute;
   left: 22.5%;
-  top: 35%;
+  top: 45%;
   width:55%;
   color: #ffffff;
   font-size: 300%;
@@ -311,7 +311,7 @@ html {
 
 .pancakes {
   position: absolute;
-  top: 20%;
+  top: 25%;
   width: 20%;
   height: 25%;
   display: block;
@@ -326,7 +326,7 @@ html {
 .burger {
   position: absolute;
   left: 80%;
-  top: 20%;
+  top: 25%;
   width: 20%;
   height: 25%;
   display: block;
@@ -361,7 +361,7 @@ html {
 } */
 .container {
   position:absolute;
-  top: 85%;
+  top: 95%;
   left: 25%;
 	width: 1000px;
 	display: flex;

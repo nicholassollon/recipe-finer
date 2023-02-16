@@ -1,24 +1,42 @@
 import '../App.css';
 import Home from './Home'
-import List from './List'
 import Form from './Form'
+import Nav from './Nav'
 import RecipiePage from './RecipiePage'
-import React, {useEffect} from 'react'
-
+import React from 'react'
+import {Route} from "react-router-dom"
 
 function App() {
 
-
-
   return (
     <div className="App">
-      <Home />
-      {/* home has nav, search, about */}
-      <List />
-      {/* <RecipiePage /> */}
-    </div>
-  );
+      <Route exact path="/">
+          <Nav />
+          <Home />
+        </Route>
+        <Route exact path="/home">
+          <Nav />
+          <Home />
+        </Route>
+        <Route exact path="/form">
+          <Nav />
+          <Form />
+        </Route>
+        <Route exact path="/recipes">
+          <Nav />
+          <RecipiePage />
+        </Route>
+    </div>)
 }
+
+//   return (
+//     <div className="App">
+
+//       <Nav />
+//       <Home />
+//     </div>
+//   );
+// }
 
 export default App;
 
