@@ -4,12 +4,13 @@ import Form from './Form'
 import Nav from './Nav'
 import RecipiePage from './RecipiePage'
 import React from 'react'
-import {Route} from "react-router-dom"
+import {Route, Switch} from "react-router-dom"
+import Recipe from "./Recipe"
 
 function App() {
-
   return (
     <div className="App">
+      <Switch>
       <Route exact path="/">
           <Nav />
           <Home />
@@ -26,6 +27,11 @@ function App() {
           <Nav />
           <RecipiePage />
         </Route>
+        <Route path={`/recipes/:id`}>
+          <Nav />
+          <Recipe />
+        </Route>
+        </Switch>
     </div>)
 }
 
