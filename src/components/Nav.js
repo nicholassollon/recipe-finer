@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import "../Nav.css"
 function Nav() {
+    const linkStyle = {
+        textDecoration: "none"
+    }
 
 
     return (
@@ -24,9 +28,9 @@ function Nav() {
             <div class="full-page-green"></div>
             <div class="ham-menu">
                 <ul class="centre-text bold-text">
-                    <Link to="/home">Home</Link>
-                    <Link to="/recipes">Recipes</Link>
-                    <Link to="/form">Submit Your Recipe</Link>
+                    <Link className='homeLink' to="/home" style={linkStyle}>Home</Link>
+                    <Link className='recipesLink' to="/recipes" style={linkStyle}>Recipes</Link>
+                    <Link className='submitLink' to="/form" style={linkStyle}>Submit Your Recipe</Link>
                 </ul>
             </div>
         </div>
