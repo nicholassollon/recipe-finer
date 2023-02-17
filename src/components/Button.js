@@ -1,21 +1,12 @@
-import React from 'react'
+import React from "react";
 
+function Button({ name, linkedin }) {
+  function handleButton() {
+    window.open(linkedin);
+    console.log(linkedin);
+  }
 
-
-
-function Button({name, linkedin}) {
-    function handleButton() {
-        window.open(linkedin)
-        console.log(linkedin)
-    }
-
-    return (
-        <button onClick = {handleButton} >
-
-            {name}
-        </button>
-    )
+  return <button onClick={handleButton}>{name}</button>;
 }
 
-
-export default Button
+export default Button;

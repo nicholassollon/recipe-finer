@@ -12,13 +12,13 @@ function RecipieCard({recipie, id}) {
             alt={recipie.name}
             className="recipie-image"
         />
-        <p>{recipie.name}</p></Link>
-        {/* <p>{recipie.ingredients} Ingredients </p>
+        <p>{recipie.name}</p>
+      </Link>
+      {/* <p>{recipie.ingredients} Ingredients </p>
         <p>{recipie.recipie}</p>
         <p> {recipie.allergens}</p> */}
     </div>
-
-    );
+  );
 }
 
 export default RecipieCard;
