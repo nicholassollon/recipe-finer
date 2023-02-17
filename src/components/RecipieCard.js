@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 function RecipieCard({recipie, id}) {
     return (
     <div className="card"><Link to={`recipes/${id}` }>
-        <img onClick={console.log(id)}
+        <img
             src={recipie.image}
             alt={recipie.name}
             className="recipie-image"
