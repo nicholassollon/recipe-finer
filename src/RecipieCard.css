@@ -1,0 +1,27 @@
+.recipie-image {
+    height: 15%;
+    width: 15%;
+    position: relative;
+    float: left;
+    padding: .5% .5%;
+    box-shadow:
+        inset 5px 5px 10px #000000,
+        inset -5px -5px 10px black;
+}
+
+.nameLink {
+    font-size: 150%;
+    color: #000000;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+}
+
+.card {
+    display: table-row-group;
+    box-shadow:
+        inset 5px 5px 10px #000000,
+        inset -5px -5px 10px black;
+        background-image: url(https://htmlcolorcodes.com/assets/images/colors/pastel-pink-color-solid-background-1920x1080.png);
+}
+body{
+    background-image: url(https://htmlcolorcodes.com/assets/images/colors/pastel-pink-color-solid-background-1920x1080.png);
+}
