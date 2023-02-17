@@ -1,0 +1,98 @@
+.peanut3{
+    position: absolute;
+    left: 2%;
+    top: 18%;
+    transform: scale(2);
+}
+.peanut4{
+    position: absolute;
+    left: 3.5%;
+    top: 18%;
+    font-size: 150%;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    color: #000;
+}
+.fish3{
+    position: absolute;
+    left: 7%;
+    top: 18%;
+    transform: scale(2);
+}
+.fish4{
+    position: absolute;
+    left: 8.5%;
+    top: 18%;
+    font-size: 150%;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    color: #000;
+}
+.shellfish3{
+    position: absolute;
+    left: 10.5%;
+    top: 18%;
+    transform: scale(2);
+}
+.shellfish4{
+    position: absolute;
+    left: 12%;
+    top: 18%;
+    font-size: 150%;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    color: #000;
+}
+.dairy3{
+    position: absolute;
+    left: 16%;
+    top: 18%;
+    transform: scale(2);
+}
+.dairy4{
+    position: absolute;
+    left: 17.5%;
+    top: 18%;
+    font-size: 150%;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    color: #000;
+}
+.soy3{
+    position: absolute;
+    left: 20%;
+    top: 18%;
+    transform: scale(2);
+}
+.soy4{
+    position: absolute;
+    left: 21.5%;
+    top: 18%;
+    font-size: 150%;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    color: #000;
+}
+.gluten3{
+    position: absolute;
+    left: 23.5%;
+    top: 18%;
+    transform: scale(2);
+}
+.gluten4{
+    position: absolute;
+    left: 25%;
+    top: 18%;
+    font-size: 150%;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    color: #000;
+}
+.egg3{
+    position: absolute;
+    left: 28%;
+    top: 18%;
+    transform: scale(2);
+}
+.egg4{
+    position: absolute;
+    left: 29.5%;
+    top: 18%;
+    font-size: 150%;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    color: #000;
+}
