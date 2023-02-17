@@ -21,13 +21,13 @@ function Recipe() {
   function getRecipe(recipe) {
     updateRecipe(recipe.recipe);
     updateName(recipe.name);
-    updateIngredients(recipe.Ingredients);
+    updateIngredients(recipe.ingredients);
     updateAllergens(recipe.allergens);
     updateImage(recipe.image);
-
-    updateIngredients(
-      ingredients.map((ingredient) => <ol class="ingredients">{ingredient}</ol>)
-    );
+  }
+  
+  function displayIngredients(){
+    return ingredients.map((ingred)=><li>{ingred}</li>)
   }
 
   //[peanuts, fish, shellfish, dairy, soy, gluten, egg]
@@ -51,13 +51,13 @@ function Recipe() {
 
   return (
     <div>
-      <h1 id="title">{console.log("hello")}</h1>
+      <h1 id="title">{name}</h1>
       <img id="image" src={image} alt={name}></img>
       <p>
         This recipe contains the following common allergens:{" "}
         {displayAllergens()}
       </p>
-      <li>{ingredients}</li>
+      <p>{displayIngredients()}</p>
       <p>{recipe}</p>
     </div>
   );
