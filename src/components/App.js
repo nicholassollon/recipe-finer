@@ -7,11 +7,12 @@ import React from 'react'
 import {Route, Switch} from "react-router-dom"
 import Recipe from "./Recipe"
 
+
 function App() {
   return (
     <div className="App">
       <Switch>
-      <Route exact path="/">
+        <Route exact path="/">
           <Nav />
           <Home />
         </Route>
@@ -31,8 +32,9 @@ function App() {
           <Nav />
           <Recipe />
         </Route>
-        </Switch>
-    </div>)
+      </Switch>
+    </div>
+  );
 }
 
 //   return (
@@ -45,4 +47,3 @@ function App() {
 // }
 
 export default App;
-
