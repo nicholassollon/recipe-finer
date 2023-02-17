@@ -70,7 +70,7 @@ function Form() {
       else display.push(ingredients[i]);
     return display;
   }
-  
+
   return (
     <div>
       <label>
@@ -136,78 +136,6 @@ function Form() {
         <br /><br />
         <input type="submit" value= "Submit Recipe"/>
         </form>
-    </div>)
-    
-        <p>Ingredients:{displayIngredients()}</p>
-        <br />
-      </div>
-      <button onClick={handleIngredients}>Add Ingredient</button>
-      <br />
-      <br />
-      {/* [peanuts, fish, shellfish, dairy, soy, gluten, egg] */}
-      <p>Does your recipe or ingredients contain...</p>
-      <br />
-      <input
-        onClick={() => handleAllergen(0)}
-        type="checkbox"
-        name="peanut"
-        value="peanut"
-      />
-      <label for="peanut">Peanut</label>
-      <input
-        onClick={() => handleAllergen(1)}
-        type="checkbox"
-        name="fish"
-        value="fish"
-      />
-      <label for="fish">Fish</label>
-      <input
-        onClick={() => handleAllergen(2)}
-        type="checkbox"
-        name="shellfish"
-        value="shellfish"
-      />
-      <label for="shellfish">Shellfish</label>
-      <br />
-      <input
-        onClick={() => handleAllergen(3)}
-        type="checkbox"
-        name="dairy"
-        value="dairy"
-      />
-      <label for="dairy">Dairy</label>
-      <input
-        onClick={() => handleAllergen(4)}
-        type="checkbox"
-        name="soy"
-        value="soy"
-      />
-      <label for="soy">Soy</label>
-      <input
-        onClick={() => handleAllergen(5)}
-        type="checkbox"
-        name="gluten"
-        value="gluten"
-      />
-      <label for="gluten">Gluten</label>
-      <input
-        onClick={() => handleAllergen(6)}
-        type="checkbox"
-        name="egg"
-        value="egg"
-      />
-      <label for="egg">Egg</label>
-      <br />
-      <br />
-      <label>
-        Recipe
-        <textarea name="recipe" value={recipe} onChange={handleRecipe} />
-      </label>
-      <br />
-      <br />
-      <button type="submit" onClick={handleSubmit}>
-        Submit Recipe
-      </button>
     </div>
   );
 }
