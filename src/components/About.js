@@ -30,20 +30,21 @@ function About() {
           alt="quesadilla"
         />
       </div>
-      <h2 className="h2">
-        Our application was built around being able to have a list of recipes
-        and being able to add to that list.
+
+      <h2 className='h2'>
+        Who doesn't love food?!? 
       </h2>
       <div>
-        <h2 className="h22">
-          Today, almost everyone here knows or knows of someone that has some
-          kind of or multiple food allergies. Our goal here is to create an
-          application that will allow people to search through a list of
+        <h2 className='h22'>
+          It's crazy to think that in this day and age, almost everyone knows 
+          a person who has one or more food allergies. The goal of our application 
+          is to create something that will allow users to search through a list of
           recipes, with the ability to filter out those allergens. This will
-          allow people to create meals that are safe for the people they love.
-          We have also included a form that allow for the addition of recipes to
-          share. Don't have food allergies, no problem, there is no need make
-          any changes to your search. This "cookbook" is for everyone!
+          allow people to create meals that are safe for the people they love. 
+          Don't think our application stops there! As you browse through, you'll 
+          notice that there is a form in which you can add additional recipes to 
+          share with anyone :)Don't have food allergies, no problem, no need
+          make any changes to your search. This "cookbook" is for everyone!
         </h2>
       </div>
       <body>
