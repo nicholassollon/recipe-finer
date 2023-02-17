@@ -20,10 +20,6 @@ useEffect(() => {
 }, [])
 
 
-
-
-
-
 return (
     <div>
         <main>

@@ -128,9 +128,9 @@ function Form() {
         <label>
             Recipe
             <textarea
-          name="recipe"
-          value={recipe}
-          onChange={handleRecipe}
+            name="recipe"
+            value={recipe}
+            onChange={handleRecipe}
         />
         </label>
         <br /><br />
