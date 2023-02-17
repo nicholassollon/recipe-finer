@@ -68,7 +68,7 @@ function Form() {
     }
 
 
-    return (<div>
+    return (<div >
         <label>
             Recipe Name
             <input
@@ -103,6 +103,7 @@ function Form() {
         <br /><br />
         {/* [peanuts, fish, shellfish, dairy, soy, gluten, egg] */}
         <p>Does your recipe or ingredients contain...</p><br />
+        <form onSubmit = {handleSubmit}>
         <input onClick={() => handleAllergen(0)} type="checkbox" name="peanut" value="peanut" />
         <label for="peanut">Peanut</label>
         <input onClick={() => handleAllergen(1)} type="checkbox" name="fish" value="fish" />
@@ -128,7 +129,8 @@ function Form() {
         />
         </label>
         <br /><br />
-        <button type="submit" onClick={handleSubmit}>Submit Recipe</button>
+        <input type="submit" value= "Submit Recipe"/>
+        </form>
     </div>)
 }
 export default Form

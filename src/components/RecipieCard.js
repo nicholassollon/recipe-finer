@@ -1,10 +1,12 @@
 import React from "react";
 import "../RecipieCard.css"
 import { Link } from "react-router-dom"
-
+const linkStyle= { 
+    textDecoration: "none"
+}
 function RecipieCard({recipie, id}) {
     return (
-    <div className="card"><Link to={`recipes/${id}` }>
+    <div className="card"><Link to={`recipes/${id}` } style={linkStyle}>
         <img onClick={console.log(id)}
             src={recipie.image}
             alt={recipie.name}
@@ -15,6 +17,7 @@ function RecipieCard({recipie, id}) {
         <p>{recipie.recipie}</p>
         <p> {recipie.allergens}</p> */}
     </div>
+
     );
 }
 
