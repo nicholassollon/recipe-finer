@@ -1,60 +1,66 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import React from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function Recipe() {
-    const { id } = useParams();
-    const [recipe, updateRecipe] = useState("");
-    const [name, updateName] = useState("");
-    const [ingredients, updateIngredients] = useState([]);
-    const [image, updateImage] = useState("");
-    const [allergens, updateAllergens] = useState([false, false, false, false, false, false, false])
+  const { id } = useParams();
+  const [recipe, updateRecipe] = useState("");
+  const [name, updateName] = useState("");
+  const [ingredients, updateIngredients] = useState([]);
+  const [image, updateImage] = useState("");
+  const [allergens, updateAllergens] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
 
+  function getRecipe(recipe) {
+    updateRecipe(recipe.recipe);
+    updateName(recipe.name);
+    updateIngredients(recipe.Ingredients);
+    updateAllergens(recipe.allergens);
+    updateImage(recipe.image);
 
-    function getRecipe(recipe) {
-        updateRecipe(recipe.recipe)
-        updateName(recipe.name)
-        updateIngredients(recipe.Ingredients)
-        updateAllergens(recipe.allergens)
-        updateImage(recipe.image)
+    updateIngredients(
+      ingredients.map((ingredient) => <ol class="ingredients">{ingredient}</ol>)
+    );
+  }
 
-        updateIngredients(ingredients.map(ingredient => <ol class="ingredients">{ingredient}</ol>))
-    }
+  //[peanuts, fish, shellfish, dairy, soy, gluten, egg]
+  function displayAllergens() {
+    let aller = "";
+    if (allergens[0]) aller += "peanuts, ";
+    if (allergens[1]) aller += "fish, ";
+    if (allergens[2]) aller += "shellfish, ";
+    if (allergens[3]) aller += "dairy, ";
+    if (allergens[4]) aller += "soy, ";
+    if (allergens[5]) aller += "gluten, ";
+    if (allergens[6]) aller += "egg, ";
 
-    //[peanuts, fish, shellfish, dairy, soy, gluten, egg]
-    function displayAllergens() {
-        let aller = "";
-        if (allergens[0])
-            aller += "peanuts, "
-        if (allergens[1])
-            aller += "fish, "
-        if (allergens[2])
-            aller += "shellfish, "
-        if (allergens[3])
-            aller += "dairy, "
-        if (allergens[4])
-            aller += "soy, "
-        if (allergens[5])
-            aller += "gluten, "
-        if (allergens[6])
-            aller += "egg, "
+    return aller;
+  }
+  useEffect(() => {
+    fetch(`http://localhost:3004/recipes/${id}`)
+      .then((r) => r.json())
+      .then((data) => getRecipe(data));
+  }, []);
 
-        return aller;
-
-    }
-    useEffect(() => {
-        fetch(`http://localhost:3004/recipes/${id}`)
-            .then(r => r.json())
-            .then(data => getRecipe(data))
-    }, [])
-
-    return <div>
-        <h1 id="title">{console.log("hello")}</h1>
-        <img id="image" src={image} alt={name}></img>
-        <p>This recipe contains the following common allergens: {displayAllergens()}</p>
-        <li>{ingredients}</li>
-        <p>{recipe}</p>
+  return (
+    <div>
+      <h1 id="title">{console.log("hello")}</h1>
+      <img id="image" src={image} alt={name}></img>
+      <p>
+        This recipe contains the following common allergens:{" "}
+        {displayAllergens()}
+      </p>
+      <li>{ingredients}</li>
+      <p>{recipe}</p>
     </div>
+  );
 }
 // "id": 1,
 //       "ingredients": [

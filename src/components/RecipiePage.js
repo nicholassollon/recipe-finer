@@ -1,12 +1,9 @@
-import { findAllByTestId } from '@testing-library/react';
 import React, {useState, useEffect} from 'react';
 import RecipieCollection from './RecipieCollection';
 import Search from './Search';
 
- //[peanuts, fish, shellfish, dairy, soy, gluten, egg]
-
 function RecipiePage() {
-    const[recipies, setRecipies] = useState([])
+    const [recipies, setRecipies] = useState([]);
 
     const[search, setSearch] = useState ('')
 
@@ -46,8 +43,9 @@ return (
                 <label for="egg">Egg</label>  
             </div>
         </main>
+
     </div>
-);
+    );
 }
 
 export default RecipiePage;
