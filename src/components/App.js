@@ -1,11 +1,12 @@
-import "../App.css";
-import Home from "./Home";
-import Form from "./Form";
-import Nav from "./Nav";
-import RecipiePage from "./RecipiePage";
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import Recipe from "./Recipe";
+
+import Home from './Home'
+import Form from './Form'
+import Nav from './Nav'
+import RecipiePage from './RecipiePage'
+import React from 'react'
+import {Route, Switch} from "react-router-dom"
+import Recipe from "./Recipe"
+
 
 function App() {
   return (

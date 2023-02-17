@@ -2,6 +2,8 @@ import React from "react";
 import "../Form.css";
 import { useState } from "react";
 function Form() {
+
+   
   //Form inputs to be posted
   const [recipe, updateRecipe] = useState("");
   const [name, updateName] = useState("");
@@ -70,73 +72,83 @@ function Form() {
       else display.push(ingredients[i]);
     return display;
   }
+  return (<div class="d1">
+        <label class="l1">
+            <input
+            class="i1"
+            placeholder="Recipe Name"
+                name="recipeName"
+                type="text"
+                onChange={handleName}
+                value={name} />
+        </label>
+        <br /><br />
+        <label class="l2">
+            <input 
+                class="i2"
+                placeholder='Recipe Picture'
+                name="image"
+                type="text"
+                onChange={handleImage}
+                value={image} />
+        </label>
+        <br /><br />
 
-  return (
-    <div>
-      <label>
-        Recipe Name
-        <input
-          name="recipeName"
-          type="text"
-          onChange={handleName}
-          value={name}
-        />
-      </label>
-      <br />
-      <br />
-      <label>
-        Recipe Picture
-        <input name="image" type="text" onChange={handleImage} value={image} />
-      </label>
-      <br />
-      <br />
-      <div>
-        <label>
-          Ingredient
-          <input
-            id="inputIngredient"
-            name="ingredient"
-            type="text"
-            onChange={handleIngredient}
-            value={ingredient}
-          />
+
+
+        <div>
+            <label class="l3">
+            <input
+                class="i3"
+                placeholder="Ingredient"
+                id="inputIngredient"
+                name="ingredient"
+                type="text"
+                onChange={handleIngredient}
+                value={ingredient} />
+
         </label>
-        <br />
-            <p>Ingredients:{displayIngredients()}</p>
+
+            <p class="ingredients">Ingredients:{displayIngredients()}</p>
             <br /></div>
-        <button onClick={handleIngredients}>Add Ingredient</button>
+        <button class="add" onClick={handleIngredients}>Add Ingredient</button>
         <br /><br />
+
+
+
+
         {/* [peanuts, fish, shellfish, dairy, soy, gluten, egg] */}
-        <p>Does your recipe or ingredients contain...</p><br />
-        <form onSubmit = {handleSubmit}>
-        <input onClick={() => handleAllergen(0)} type="checkbox" name="peanut" value="peanut" />
-        <label for="peanut">Peanut</label>
-        <input onClick={() => handleAllergen(1)} type="checkbox" name="fish" value="fish" />
-        <label for="fish">Fish</label>
-        <input onClick={() => handleAllergen(2)} type="checkbox" name="shellfish" value="shellfish" />
-        <label for="shellfish">Shellfish</label>
+
+        <p class="ques">Does your recipe or ingredients contain...</p><br />
+        <input class="peanut" onClick={() => handleAllergen(0)} type="checkbox" name="peanut" value="peanut" />
+        <label class="peanut2" for="peanut">Peanut</label>
+        <input class="fish" onClick={() => handleAllergen(1)} type="checkbox" name="fish" value="fish" />
+        <label class="fish2" for="fish">Fish</label>
+        <input class="shellfish" onClick={() => handleAllergen(2)} type="checkbox" name="shellfish" value="shellfish" />
+        <label class="shellfish2" for="shellfish">Shellfish</label>
+
         <br />
-        <input onClick={() => handleAllergen(3)} type="checkbox" name="dairy" value="dairy" />
-        <label for="dairy">Dairy</label>
-        <input onClick={() => handleAllergen(4)} type="checkbox" name="soy" value="soy" />
-        <label for="soy">Soy</label>
-        <input onClick={() => handleAllergen(5)} type="checkbox" name="gluten" value="gluten" />
-        <label for="gluten">Gluten</label>
-        <input onClick={() => handleAllergen(6)} type="checkbox" name="egg" value="egg" />
-        <label for="egg">Egg</label>
+        <input class="dairy" onClick={() => handleAllergen(3)} type="checkbox" name="dairy" value="dairy" />
+        <label class="dairy2" for="dairy">Dairy</label>
+        <input class="soy" onClick={() => handleAllergen(4)} type="checkbox" name="soy" value="soy" />
+        <label class="soy2" for="soy">Soy</label>
+        <input class="gluten" onClick={() => handleAllergen(5)} type="checkbox" name="gluten" value="gluten" />
+        <label class="gluten2" for="gluten">Gluten</label>
+        <input class="egg" onClick={() => handleAllergen(6)} type="checkbox" name="egg" value="egg" />
+        <label class="egg2" for="egg">Egg</label>
         <br /><br />
         <label>
-            Recipe
-            <textarea
-            name="recipe"
-            value={recipe}
-            onChange={handleRecipe}
+        <textarea
+            class="text"
+            placeholder="Recipe Steps"
+          name="recipe"
+          value={recipe}
+          onChange={handleRecipe}
         />
         </label>
         <br /><br />
-        <input type="submit" value= "Submit Recipe"/>
-        </form>
-    </div>
-  );
+        <button class="sub" type="submit" onClick={handleSubmit}>Submit Recipe</button>
+    </div>)
+
 }
 export default Form;

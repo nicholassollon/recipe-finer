@@ -9,4 +9,6 @@ function Button({ name, linkedin }) {
   return <button onClick={handleButton}>{name}</button>;
 }
 
-export default Button;
+
+export default Button
+

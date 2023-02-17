@@ -1,10 +1,11 @@
-import React from "react";
+
+import React from "react"
+import '../About.css'
 
 function About() {
   function handleButton(linkedin) {
     window.open(linkedin);
   }
-
   return (
     <div className="About">
       <h1 className="welcome">Welcome!</h1>
