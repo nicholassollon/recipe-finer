@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import '../Recipe.css'
 function Recipe() {
   const { id } = useParams();
   const [recipe, updateRecipe] = useState("");
@@ -51,14 +51,14 @@ function Recipe() {
 
   return (
     <div>
-      <h1 id="title">{name}</h1>
-      <img id="image" src={image} alt={name}></img>
-      <p>
+      <h1 class="h1" id="title">{name}</h1>
+      <img class="img2" id="image" src={image} alt={name}></img>
+      <p class="allergy">
         This recipe contains the following common allergens:{" "}
         {displayAllergens()}
       </p>
-      <p>{displayIngredients()}</p>
-      <p>{recipe}</p>
+      <p class="ingre">{displayIngredients()}</p>
+      <p class="rec">{recipe}</p>
     </div>
   );
 }
